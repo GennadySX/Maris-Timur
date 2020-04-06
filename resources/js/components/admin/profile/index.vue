@@ -160,16 +160,18 @@
                 e.preventDefault();
                 const form = $('#sendForm').serializeArray();
                 Object.keys(form).map((key, index) => this.formData[form[key]['name']] = form[key]['value']);
-                await axios.post('/profile/update', this.formData).then(res => (res.data.status) ?
+                await axios.post('/home/profile/update', this.formData).then(res => (res.data.status) ?
                     window.location.reload()
                     : alert('Ошибка! ', res.data.mess))
             },
             async avatarChange(e) {
                 let avatar = new FormData();
                 avatar.append('avatar', e.target.files[0]);
-                if (e.target.files && e.target.files[0])  await axios.post('/profile/update/avatar', avatar).then(res =>
-                    (!res.data.status) ? alert('Ошибка! ', res.data.mess)
-                        : null)
+                if (e.target.files && e.target.files[0])
+                    await axios.post('/home/profile/update/avatar', avatar).then(res =>
+                        (!res.data.status) ?
+                            alert('Ошибка! ', res.data.mess)
+                            : null)
             }
         }
     }

@@ -26,11 +26,8 @@ Route::group(['prefix' => '/home'], function () {
 
     Route::group(['prefix' => '/profile'], function () {
         Route::get('/', 'CustomerController@index');
-        Route::get('/new', 'CustomerController@new');
-        Route::post('/new', 'CustomerController@create');
-        Route::get('/edit/{id}', 'CustomerController@edit');
-        Route::post('/edit/{id}', 'CustomerController@update');
-        Route::get('/delete/{id}', 'CustomerController@destroy');
+        Route::post('/update', 'CustomerController@update');
+        Route::post('/update/avatar', 'CustomerController@updateAvatar');
     });
 
     Route::group(['prefix' => '/repair'], function () {

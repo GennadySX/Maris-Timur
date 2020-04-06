@@ -26,7 +26,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-
         return view('admin.profile.index')->with(['profile' => Customer::where('customer_id', Auth::id())->with('user', 'device')->first()]);
     }
+
+
+
 }

@@ -2151,7 +2151,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                   return _this.formData[form[key]['name']] = form[key]['value'];
                 });
                 _context.next = 5;
-                return axios.post('/profile/update', _this.formData).then(function (res) {
+                return axios.post('/home/profile/update', _this.formData).then(function (res) {
                   return res.data.status ? window.location.reload() : alert('Ошибка! ', res.data.mess);
                 });
 
@@ -2179,7 +2179,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 }
 
                 _context2.next = 5;
-                return axios.post('/profile/update/avatar', avatar).then(function (res) {
+                return axios.post('/home/profile/update/avatar', avatar).then(function (res) {
                   return !res.data.status ? alert('Ошибка! ', res.data.mess) : null;
                 });
 
