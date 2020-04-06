@@ -4,7 +4,21 @@
 
 <script>
     export default {
-        name: "create"
+        name: "create",
+        props: {
+            profile_data: null
+        },
+        data() {
+            return {
+
+            }
+        },
+        created() {
+
+        },
+        methods: {
+
+        }
     }
 </script>
 

@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Customer;
+use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -23,6 +26,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('admin.profile.index');
+
+        return view('admin.profile.index')->with(['profile' => Customer::where('customer_id', Auth::id())->with('user', 'device')->first()]);
     }
 }

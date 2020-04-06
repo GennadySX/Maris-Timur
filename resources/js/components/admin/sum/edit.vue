@@ -4,7 +4,21 @@
 
 <script>
     export default {
-        name: "edit"
+        name: "edit",
+        props: {
+            profile_data: null
+        },
+        data() {
+            return {
+
+            }
+        },
+        created() {
+
+        },
+        methods: {
+
+        }
     }
 </script>
 

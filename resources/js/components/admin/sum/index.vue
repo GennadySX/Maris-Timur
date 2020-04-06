@@ -4,7 +4,21 @@
 
 <script>
     export default {
-        name: "index"
+        name: "index",
+        props: {
+            profile_data: null
+        },
+        data() {
+            return {
+
+            }
+        },
+        created() {
+
+        },
+        methods: {
+
+        }
     }
 </script>
 

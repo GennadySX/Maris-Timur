@@ -17,4 +17,16 @@ class Customer extends Model
     ];
 
     public $timestamps = false;
+
+
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'customer_id');
+    }
+
+    public function device()
+    {
+        return $this->belongsTo(Device::class, 'customer_id');
+    }
+
 }
