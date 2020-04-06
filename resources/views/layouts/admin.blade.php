@@ -1,6 +1,10 @@
 @include('layouts.admin.header')
 @include('layouts.admin.sidebar')
-
-@yield('content')
-
+<section id="main-content">
+    <section class="wrapper">
+        <div id="app">
+            @yield('content')
+        </div>
+    </section>
+</section>
 @include('layouts.admin.footer')
