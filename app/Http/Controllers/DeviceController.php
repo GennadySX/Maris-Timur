@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Ringlist;
+use App\Device;
 use Illuminate\Http\Request;
 
-class RinglistController extends Controller
+class DeviceController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class RinglistController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Ringlist  $ringlist
+     * @param  \App\Device  $device
      * @return \Illuminate\Http\Response
      */
-    public function show(Ringlist $ringlist)
+    public function show(Device $device)
     {
         //
     }
@@ -52,10 +52,10 @@ class RinglistController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Ringlist  $ringlist
+     * @param  \App\Device  $device
      * @return \Illuminate\Http\Response
      */
-    public function edit(Ringlist $ringlist)
+    public function edit(Device $device)
     {
         //
     }
@@ -64,10 +64,10 @@ class RinglistController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Ringlist  $ringlist
+     * @param  \App\Device  $device
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Ringlist $ringlist)
+    public function update(Request $request, Device $device)
     {
         //
     }
@@ -75,10 +75,10 @@ class RinglistController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Ringlist  $ringlist
+     * @param  \App\Device  $device
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Ringlist $ringlist)
+    public function destroy(Device $device)
     {
         //
     }

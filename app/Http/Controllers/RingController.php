@@ -2,26 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use App\Tariff;
+use App\Ring;
 use Illuminate\Http\Request;
 
-class TariffController extends Controller
+class RingController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function index()
     {
-        //
+        return view('admin.calling.index');
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function create()
     {
         //
@@ -41,10 +33,10 @@ class TariffController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Tariff  $tariff
+     * @param  \App\Ring  $ring
      * @return \Illuminate\Http\Response
      */
-    public function show(Tariff $tariff)
+    public function show(Ring $ring)
     {
         //
     }
@@ -52,10 +44,10 @@ class TariffController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Tariff  $tariff
+     * @param  \App\Ring  $ring
      * @return \Illuminate\Http\Response
      */
-    public function edit(Tariff $tariff)
+    public function edit(Ring $ring)
     {
         //
     }
@@ -64,10 +56,10 @@ class TariffController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Tariff  $tariff
+     * @param  \App\Ring  $ring
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Tariff $tariff)
+    public function update(Request $request, Ring $ring)
     {
         //
     }
@@ -75,10 +67,10 @@ class TariffController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Tariff  $tariff
+     * @param  \App\Ring  $ring
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Tariff $tariff)
+    public function destroy(Ring $ring)
     {
         //
     }

@@ -2,14 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use App\Customer;
+use App\Sum;
 use Illuminate\Http\Request;
 
-class CustomerController extends Controller
+class SumController extends Controller
 {
     public function index()
     {
-        return view('admin.customer.index');
+        return view('admin.sum.index');
     }
 
     /**
@@ -36,10 +36,10 @@ class CustomerController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Customer  $customer
+     * @param  \App\Sum  $sum
      * @return \Illuminate\Http\Response
      */
-    public function show(Customer $customer)
+    public function show(Sum $sum)
     {
         //
     }
@@ -47,10 +47,10 @@ class CustomerController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Customer  $customer
+     * @param  \App\Sum  $sum
      * @return \Illuminate\Http\Response
      */
-    public function edit(Customer $customer)
+    public function edit(Sum $sum)
     {
         //
     }
@@ -59,10 +59,10 @@ class CustomerController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Customer  $customer
+     * @param  \App\Sum  $sum
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Customer $customer)
+    public function update(Request $request, Sum $sum)
     {
         //
     }
@@ -70,10 +70,10 @@ class CustomerController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Customer  $customer
+     * @param  \App\Sum  $sum
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Customer $customer)
+    public function destroy(Sum $sum)
     {
         //
     }

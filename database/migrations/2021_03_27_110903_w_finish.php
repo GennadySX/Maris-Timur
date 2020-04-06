@@ -13,8 +13,6 @@ class WFinish extends Migration
      */
     public function up()
     {
-
-
         Schema::table('ringlists', function (Blueprint $table) {
            $table->foreign('customer_id')->references('id')->on('customers')
                ->onDelete('cascade')->onUpdate('cascade');

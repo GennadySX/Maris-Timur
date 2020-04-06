@@ -2,19 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use App\Offer;
+use App\Receipt;
 use Illuminate\Http\Request;
 
-class OfferController extends Controller
+class ReceiptController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
-        //
+        return view('admin.receipt.index');
     }
 
     /**
@@ -41,10 +36,10 @@ class OfferController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Offer  $offer
+     * @param  \App\Receipt  $receipt
      * @return \Illuminate\Http\Response
      */
-    public function show(Offer $offer)
+    public function show(Receipt $receipt)
     {
         //
     }
@@ -52,10 +47,10 @@ class OfferController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Offer  $offer
+     * @param  \App\Receipt  $receipt
      * @return \Illuminate\Http\Response
      */
-    public function edit(Offer $offer)
+    public function edit(Receipt $receipt)
     {
         //
     }
@@ -64,10 +59,10 @@ class OfferController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Offer  $offer
+     * @param  \App\Receipt  $receipt
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Offer $offer)
+    public function update(Request $request, Receipt $receipt)
     {
         //
     }
@@ -75,10 +70,10 @@ class OfferController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Offer  $offer
+     * @param  \App\Receipt  $receipt
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Offer $offer)
+    public function destroy(Receipt $receipt)
     {
         //
     }

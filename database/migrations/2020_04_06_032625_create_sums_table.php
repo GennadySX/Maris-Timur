@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePayChecksTable extends Migration
+class CreateSumsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,8 @@ class CreatePayChecksTable extends Migration
      */
     public function up()
     {
-        Schema::create('pay_checks', function (Blueprint $table) {
+        Schema::create('sums', function (Blueprint $table) {
             $table->id();
-            $table->string('mapCount');
-            $table->string('bank');
-            $table->string('phoneAddress');
-            $table->string('value');
             $table->timestamps();
         });
     }
@@ -30,6 +26,6 @@ class CreatePayChecksTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('pay_checks');
+        Schema::dropIfExists('sums');
     }
 }

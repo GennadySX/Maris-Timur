@@ -2,19 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use App\PayCheck;
+use App\Repair;
 use Illuminate\Http\Request;
 
-class PayCheckController extends Controller
+class RepairController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
-        //
+        return view('admin.repair.index');
     }
 
     /**
@@ -41,10 +36,10 @@ class PayCheckController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\PayCheck  $payCheck
+     * @param  \App\Repair  $repair
      * @return \Illuminate\Http\Response
      */
-    public function show(PayCheck $payCheck)
+    public function show(Repair $repair)
     {
         //
     }
@@ -52,10 +47,10 @@ class PayCheckController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\PayCheck  $payCheck
+     * @param  \App\Repair  $repair
      * @return \Illuminate\Http\Response
      */
-    public function edit(PayCheck $payCheck)
+    public function edit(Repair $repair)
     {
         //
     }
@@ -64,10 +59,10 @@ class PayCheckController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\PayCheck  $payCheck
+     * @param  \App\Repair  $repair
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, PayCheck $payCheck)
+    public function update(Request $request, Repair $repair)
     {
         //
     }
@@ -75,10 +70,10 @@ class PayCheckController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\PayCheck  $payCheck
+     * @param  \App\Repair  $repair
      * @return \Illuminate\Http\Response
      */
-    public function destroy(PayCheck $payCheck)
+    public function destroy(Repair $repair)
     {
         //
     }
