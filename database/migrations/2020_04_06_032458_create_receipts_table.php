@@ -15,6 +15,8 @@ class CreateReceiptsTable extends Migration
     {
         Schema::create('receipts', function (Blueprint $table) {
             $table->id();
+            $table->bigInteger('customer_id')->unsigned();
+            $table->bigInteger('device_id')->unsigned();
             $table->string('MapPhone')->nullable();
             $table->string('DateMap')->nullable();
             $table->float('MapCount')->nullable();

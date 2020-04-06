@@ -12,5 +12,11 @@ class UserSeed extends Seeder
     public function run()
     {
         //
+        $user = new \App\User();
+        $user->fill([
+
+        ]);
+        $user->save();
+
     }
 }

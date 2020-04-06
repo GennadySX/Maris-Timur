@@ -15,6 +15,7 @@ class CreateRepairsTable extends Migration
     {
         Schema::create('repairs', function (Blueprint $table) {
             $table->id();
+            $table->bigInteger('customer_id')->unsigned();
             $table->dateTime('DateClaim')->nullable();
             $table->integer('NumberClaim')->nullable();
             $table->string('Inspector')->nullable();

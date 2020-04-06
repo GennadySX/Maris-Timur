@@ -15,8 +15,8 @@ class CreateRingsTable extends Migration
     {
         Schema::create('rings', function (Blueprint $table) {
             $table->id();
-            $table->integer('tariff_id')->unsigned();
-            $table->integer('customer_id')->unsigned();
+            $table->bigInteger('device_id')->unsigned();
+            $table->bigInteger('customer_id')->unsigned();
             $table->string('Number');
             $table->boolean('RingType')->default(true);
             $table->timestamp('dateRing')->nullable();

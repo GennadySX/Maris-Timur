@@ -13,12 +13,37 @@ class WFinish extends Migration
      */
     public function up()
     {
-        Schema::table('ringlists', function (Blueprint $table) {
-           $table->foreign('customer_id')->references('id')->on('customers')
+        Schema::table('customers', function (Blueprint $table) {
+           $table->foreign('customer_id')->references('id')->on('users')
                ->onDelete('cascade')->onUpdate('cascade');
-            $table->foreign('tariff_id')->references('id')->on('tariffs')
+        });
+
+
+        Schema::table('repairs', function (Blueprint $table) {
+            $table->foreign('customer_id')->references('id')->on('customers')
                 ->onDelete('cascade')->onUpdate('cascade');
         });
+
+        Schema::table('receipts', function (Blueprint $table) {
+            $table->foreign('customer_id')->references('id')->on('customers')
+                ->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('device_id')->references('id')->on('devices')
+                ->onDelete('cascade')->onUpdate('cascade');
+        });
+
+        Schema::table('rings', function (Blueprint $table) {
+            $table->foreign('customer_id')->references('id')->on('customers')
+                ->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('device_id')->references('id')->on('devices')
+                ->onDelete('cascade')->onUpdate('cascade');
+        });
+
+        Schema::table('devices', function (Blueprint $table) {
+            $table->foreign('customer_id')->references('id')->on('customers')
+                ->onDelete('cascade')->onUpdate('cascade');
+        });
+
+
     }
 
     /**
