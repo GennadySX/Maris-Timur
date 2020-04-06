@@ -6,6 +6,8 @@
         <div class="">
             <div class="page-title">
                 <div class="title_left">
+                    <a class="btn btn-success ml-3" href="new"> Создать новый</a>
+
                 </div>
 
                 <div class="title_right">
@@ -26,6 +28,7 @@
 
                 <div class="col-md-12 col-sm-12  ">
                     <div class="x_panel">
+
                         <div class="x_title">
                             <h2>Таблица <small>звонков</small></h2>
                             <ul class="nav navbar-right panel_toolbox">
@@ -43,7 +46,6 @@
                             </ul>
                             <div class="clearfix"></div>
                         </div>
-
                         <div class="x_content">
                             <div class="table-responsive">
                                 <table class="table table-striped jambo_table bulk_action">
@@ -58,7 +60,7 @@
                                         <th class="column-title">Стоимость</th>
                                         <th class="column-title">Дата</th>
                                         <th class="column-title">Коммент</th>
-
+                                        <th class="column-title">Операции</th>
                                         <th class="bulk-actions" colspan="7">
                                             <a class="antoo" style="color:#fff; font-weight:500;">Bulk Actions ( <span class="action-cnt"> </span> ) <i class="fa fa-chevron-down"></i></a>
                                         </th>
@@ -75,6 +77,10 @@
                                         <td class=" ">$50,3</td>
                                         <td class=" "> 23.03.2020 11:47:56 PM </td>
                                         <td class=" ">Нет коммента <i class="success fa fa-long-arrow-up"></i></td>
+                                        <td class="d-flex text-center">
+                                            <a class="btn btn-primary mr-1" href="new"> <i class="fa fa-pencil"></i> </a>
+                                            <a class="btn btn-danger" href="new"> <i class="fa fa-trash"></i> </a>
+                                        </td>
                                     </tr>
                                     <tr class="odd pointer">
                                         <td class="">+7 999 758 77 77</td>
@@ -85,6 +91,10 @@
                                         <td class=" ">$50,3</td>
                                         <td class=" "> 23.03.2020 11:47:56 PM </td>
                                         <td class=" ">Нет коммента <i class="success fa fa-long-arrow-up"></i></td>
+                                        <td class="d-flex text-center">
+                                            <a class="btn btn-primary mr-1" href="new"> <i class="fa fa-pencil"></i> </a>
+                                            <a class="btn btn-danger" href="new"> <i class="fa fa-trash"></i> </a>
+                                        </td>
                                     </tr>
 
                                     <tr class="even pointer">
@@ -96,6 +106,10 @@
                                         <td class=" ">$50,3</td>
                                         <td class=" "> 23.03.2020 11:47:56 PM </td>
                                         <td class=" ">Нет коммента <i class="success fa fa-long-arrow-up"></i></td>
+                                        <td class="d-flex text-center">
+                                            <a class="btn btn-primary mr-1" href="new"> <i class="fa fa-pencil"></i> </a>
+                                            <a class="btn btn-danger" href="new"> <i class="fa fa-trash"></i> </a>
+                                        </td>
                                     </tr>
                                     <tr class="odd pointer">
                                         <td class="">+7 999 758 77 77</td>
@@ -106,88 +120,10 @@
                                         <td class=" ">$50,3</td>
                                         <td class=" "> 23.03.2020 11:47:56 PM </td>
                                         <td class=" ">Нет коммента <i class="success fa fa-long-arrow-up"></i></td>
-                                    </tr>
-                                    <tr class="even pointer">
-                                        <td class="pl-3">+7 999 758 77 77</td>
-                                        <td class=" ">5</td>
-                                        <td class=" ">Междугородный</td>
-                                        <td class=" ">Россия</td>
-                                        <td class=" ">Казань</td>
-                                        <td class=" ">$50,3</td>
-                                        <td class=" "> 23.03.2020 11:47:56 PM </td>
-                                        <td class=" ">Нет коммента <i class="success fa fa-long-arrow-up"></i></td>
-                                    </tr>
-                                    <tr class="odd pointer">
-                                        <td class="">+7 999 758 77 77</td>
-                                        <td class=" ">5</td>
-                                        <td class=" ">Междугородный</td>
-                                        <td class=" ">Россия</td>
-                                        <td class=" ">Казань</td>
-                                        <td class=" ">$50,3</td>
-                                        <td class=" "> 23.03.2020 11:47:56 PM </td>
-                                        <td class=" ">Нет коммента <i class="success fa fa-long-arrow-up"></i></td>
-                                    </tr>
-
-                                    <tr class="even pointer">
-                                        <td class="pl-3">+7 999 758 77 77</td>
-                                        <td class=" ">5</td>
-                                        <td class=" ">Междугородный</td>
-                                        <td class=" ">Россия</td>
-                                        <td class=" ">Казань</td>
-                                        <td class=" ">$50,3</td>
-                                        <td class=" "> 23.03.2020 11:47:56 PM </td>
-                                        <td class=" ">Нет коммента <i class="success fa fa-long-arrow-up"></i></td>
-                                    </tr>
-                                    <tr class="odd pointer">
-                                        <td class="">+7 999 758 77 77</td>
-                                        <td class=" ">5</td>
-                                        <td class=" ">Междугородный</td>
-                                        <td class=" ">Россия</td>
-                                        <td class=" ">Казань</td>
-                                        <td class=" ">$50,3</td>
-                                        <td class=" "> 23.03.2020 11:47:56 PM </td>
-                                        <td class=" ">Нет коммента <i class="success fa fa-long-arrow-up"></i></td>
-                                    </tr>
-                                    <tr class="even pointer">
-                                        <td class="pl-3">+7 999 758 77 77</td>
-                                        <td class=" ">5</td>
-                                        <td class=" ">Междугородный</td>
-                                        <td class=" ">Россия</td>
-                                        <td class=" ">Казань</td>
-                                        <td class=" ">$50,3</td>
-                                        <td class=" "> 23.03.2020 11:47:56 PM </td>
-                                        <td class=" ">Нет коммента <i class="success fa fa-long-arrow-up"></i></td>
-                                    </tr>
-                                    <tr class="odd pointer">
-                                        <td class="">+7 999 758 77 77</td>
-                                        <td class=" ">5</td>
-                                        <td class=" ">Междугородный</td>
-                                        <td class=" ">Россия</td>
-                                        <td class=" ">Казань</td>
-                                        <td class=" ">$50,3</td>
-                                        <td class=" "> 23.03.2020 11:47:56 PM </td>
-                                        <td class=" ">Нет коммента <i class="success fa fa-long-arrow-up"></i></td>
-                                    </tr>
-
-                                    <tr class="even pointer">
-                                        <td class="pl-3">+7 999 758 77 77</td>
-                                        <td class=" ">5</td>
-                                        <td class=" ">Междугородный</td>
-                                        <td class=" ">Россия</td>
-                                        <td class=" ">Казань</td>
-                                        <td class=" ">$50,3</td>
-                                        <td class=" "> 23.03.2020 11:47:56 PM </td>
-                                        <td class=" ">Нет коммента <i class="success fa fa-long-arrow-up"></i></td>
-                                    </tr>
-                                    <tr class="odd pointer">
-                                        <td class="">+7 999 758 77 77</td>
-                                        <td class=" ">5</td>
-                                        <td class=" ">Междугородный</td>
-                                        <td class=" ">Россия</td>
-                                        <td class=" ">Казань</td>
-                                        <td class=" ">$50,3</td>
-                                        <td class=" "> 23.03.2020 11:47:56 PM </td>
-                                        <td class=" ">Нет коммента <i class="success fa fa-long-arrow-up"></i></td>
+                                        <td class="d-flex text-center">
+                                            <a class="btn btn-primary mr-1" href="new"> <i class="fa fa-pencil"></i> </a>
+                                            <a class="btn btn-danger" href="new"> <i class="fa fa-trash"></i> </a>
+                                        </td>
                                     </tr>
 
                                     </tbody>
