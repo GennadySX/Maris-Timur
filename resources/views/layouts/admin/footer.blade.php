@@ -49,6 +49,13 @@
 <script src="{{asset('admin/dash/vendors/moment/min/moment.min.js')}}"></script>
 <script src="{{asset('admin/dash/vendors/bootstrap-daterangepicker/daterangepicker.js')}}"></script>
 
+<script src="{{asset('admin/dash/vendors/starrr/dist/starrr.js')}}"></script>
+
+<script src="{{asset('admin/dash/vendors/devbridge-autocomplete/dist/jquery.autocomplete.min.js')}}"></script>
+
+
+
+
 <!-- Custom Theme Scripts -->
 <script src="{{asset('admin/dash/build/js/custom.min.js')}}"></script>
 <script>

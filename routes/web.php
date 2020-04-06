@@ -43,7 +43,7 @@ Route::group(['prefix' => '/home'], function () {
     Route::group(['prefix' => '/ring'], function () {
         Route::get('/', 'RingController@index');
         Route::get('/new', 'RingController@new');
-        Route::post('/new', 'RingController@create');
+        Route::post('/create', 'RingController@create');
         Route::get('/edit/{id}', 'RingController@edit');
         Route::post('/edit/{id}', 'RingController@update');
         Route::get('/delete/{id}', 'RingController@destroy');
