@@ -22,6 +22,8 @@ class WFinish extends Migration
         Schema::table('repairs', function (Blueprint $table) {
             $table->foreign('customer_id')->references('id')->on('customers')
                 ->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('device_id')->references('id')->on('devices')
+                ->onDelete('cascade')->onUpdate('cascade');
         });
 
         Schema::table('receipts', function (Blueprint $table) {

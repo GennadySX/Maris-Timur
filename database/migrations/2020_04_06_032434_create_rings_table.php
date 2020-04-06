@@ -19,7 +19,7 @@ class CreateRingsTable extends Migration
             $table->bigInteger('customer_id')->unsigned();
             $table->string('Number');
             $table->boolean('RingType')->default(true);
-            $table->timestamp('dateRing')->nullable();
+            $table->timestamp('dateRing')->default(\Carbon\Carbon::now())->nullable();
             $table->string('Country')->nullable();
             $table->string('Town')->nullable();
             $table->integer('Value')->default(1);

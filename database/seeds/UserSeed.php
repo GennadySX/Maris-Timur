@@ -14,9 +14,10 @@ class UserSeed extends Seeder
         //
         $user = new \App\User();
         $user->fill([
-
-        ]);
-        $user->save();
+            'name'=> 'Timur Zotov',
+            'email'=> 'admin@mail.com',
+            'password'=> bcrypt('adminPass'),
+        ])->save();
 
     }
 }

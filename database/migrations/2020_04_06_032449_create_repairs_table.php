@@ -16,10 +16,11 @@ class CreateRepairsTable extends Migration
         Schema::create('repairs', function (Blueprint $table) {
             $table->id();
             $table->bigInteger('customer_id')->unsigned();
-            $table->dateTime('DateClaim')->nullable();
+            $table->bigInteger('device_id')->unsigned();
+            $table->dateTime('DateClaim')->default(\Carbon\Carbon::now())->nullable();
             $table->integer('NumberClaim')->nullable();
             $table->string('Inspector')->nullable();
-            $table->dateTime('DateRepair')->nullable();
+            $table->dateTime('DateRepair')->default(\Carbon\Carbon::tomorrow())->nullable();
             $table->float('Compensation')->nullable();
         });
     }

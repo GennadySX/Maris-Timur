@@ -18,7 +18,7 @@ class CreateReceiptsTable extends Migration
             $table->bigInteger('customer_id')->unsigned();
             $table->bigInteger('device_id')->unsigned();
             $table->string('MapPhone')->nullable();
-            $table->string('DateMap')->nullable();
+            $table->string('DateMap')->default(\Carbon\Carbon::now())->nullable();
             $table->float('MapCount')->nullable();
             $table->string('Account')->nullable();
             $table->string('Bank')->nullable();
