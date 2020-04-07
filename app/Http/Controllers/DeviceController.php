@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Device;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class DeviceController extends Controller
 {
@@ -24,7 +25,8 @@ class DeviceController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.receipt.index')->with(['data' => Device::where('customer_id', Auth::id())->get()]);
+
     }
 
     /**

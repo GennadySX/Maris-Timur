@@ -25,62 +25,61 @@
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="control-label col-md-3 col-sm-3 col-xs-3">Номер оплаты</label>
+                                <label class="control-label col-md-3 col-sm-3 col-xs-3">Номер абонента</label>
                                 <div class="col-md-9 col-sm-9 col-xs-9">
-                                    <input type="text" class="form-control" name="MapPhone">
+                                    <input type="text" class="form-control" name="Number">
+                                    <span class="fa fa-phone form-control-feedback right" aria-hidden="true"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label class="control-label col-md-3 col-sm-3 col-xs-3" name="RingType">Тип</label>
+                                <div class="col-md-9 col-sm-9 col-xs-9">
+                                    <select class="form-control" name="RingType">
+                                        <option value="1">Междугородный</option>
+                                        <option value="0">Международный</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="control-label col-md-3 col-sm-3 col-xs-3">Страна</label>
+                                <div class="col-md-9 col-sm-9 col-xs-9">
+                                    <input type="text" class="form-control" name="Country">
+                                    <span class="fa fa-globe form-control-feedback right" aria-hidden="true"></span>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="control-label col-md-3 col-sm-3 col-xs-3">Город</label>
+                                <div class="col-md-9 col-sm-9 col-xs-9">
+                                    <input type="text" class="form-control" name="Town">
+                                    <span class="fa fa-building-o form-control-feedback right" aria-hidden="true"></span>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="control-label col-md-3 col-sm-3 col-xs-3">Минут</label>
+                                <div class="col-md-9 col-sm-9 col-xs-9">
+                                    <input type="text" class="form-control" name="Value">
+                                    <span class="fa fa-clock-o form-control-feedback right" aria-hidden="true"></span>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="control-label col-md-3 col-sm-3 col-xs-3">Стоимость</label>
+                                <div class="col-md-9 col-sm-9 col-xs-9">
+                                    <input type="text" class="form-control" name="Sum">
+                                    <span class="fa fa-usd form-control-feedback right" aria-hidden="true"></span>
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label class="control-label col-md-3 col-sm-3 col-xs-3">Дата</label>
                                 <div class="col-md-9 col-sm-9 col-xs-9">
-                                    <input type="datetime-local" data-date-format="DD MMMM YYYY " :value="now" class="form-control" name="DateMap">
+                                    <input type="datetime-local" data-date-format="DD MMMM YYYY " :value="now" class="form-control" name="dateRing">
+                                    <span class="fa fa-calendar form-control-feedback right" aria-hidden="true"></span>
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="control-label col-md-3 col-sm-3 col-xs-3">Сумма</label>
+                                <label class="control-label col-md-3 col-sm-3 col-xs-3">Коммент</label>
                                 <div class="col-md-9 col-sm-9 col-xs-9">
-                                    <input type="text" class="form-control" name="MapCount">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label class="control-label col-md-3 col-sm-3 col-xs-3">Счет</label>
-                                <div class="col-md-9 col-sm-9 col-xs-9">
-                                    <input type="text" class="form-control" name="Account">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label class="control-label col-md-3 col-sm-3 col-xs-3">Банк</label>
-                                <div class="col-md-9 col-sm-9 col-xs-9">
-                                    <input type="text" class="form-control" name="Bank">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label class="control-label col-md-3 col-sm-3 col-xs-3">Адресс</label>
-                                <div class="col-md-9 col-sm-9 col-xs-9">
-                                    <input type="text" class="form-control" name="PhoneAddress">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label class="control-label col-md-3 col-sm-3 col-xs-3">Тариф</label>
-                                <div class="col-md-9 col-sm-9 col-xs-9">
-                                    <select class="form-control" name="Value">
-                                        <option value="100">100</option>
-                                        <option value="200">200</option>
-                                        <option value="300">300</option>
-                                        <option value="400">400</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label class="control-label col-md-3 col-sm-3 col-xs-3">Тип льготы</label>
-                                <div class="col-md-9 col-sm-9 col-xs-9">
-                                    <input type="text" class="form-control" name="ExemptType">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label class="control-label col-md-3 col-sm-3 col-xs-3">Величина льготы</label>
-                                <div class="col-md-9 col-sm-9 col-xs-9">
-                                    <input type="text" class="form-control" name="Exempt">
+                                    <textarea class="form-control" rows="3" placeholder="Введите текст" name="Comment"></textarea>
                                 </div>
                             </div>
                         </form>
@@ -118,10 +117,10 @@
             send() {
                 const  data = $('#sendForm').serializeArray();
                 Object.keys(data).map((key, index) => this.formData[data[key]['name']] = data[key]['value']);
-                axios.post('/home/receipt/create', this.formData).then(res => {
+                axios.post('/home/ring/create', this.formData).then(res => {
                     if(res.data.status) {
                         $('#closeModalCreate').trigger('click');
-                        this.$emit('created', res.data.receipt);
+                        this.$emit('created', res.data.ring);
                     }
                 })
             },

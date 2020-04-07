@@ -8,6 +8,7 @@ class Repair extends Model
 {
     //
     protected $fillable = [
+        'device_id',
         'customer_id',
         'DateClaim',
         'NumberClaim',
@@ -18,4 +19,8 @@ class Repair extends Model
 
     public $timestamps = false;
 
+    public function device()
+    {
+        return $this->belongsTo(Device::class, 'device_id');
+    }
 }

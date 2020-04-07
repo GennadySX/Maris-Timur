@@ -31,6 +31,10 @@ Vue.component('call-index', require('./components/admin/calls/index.vue').defaul
 Vue.component('call-new', require('./components/admin/calls/index.vue').default);
 Vue.component('call-edit', require('./components/admin/calls/index.vue').default);
 
+Vue.component('device-index', require('./components/admin/device/index.vue').default);
+Vue.component('device-new', require('./components/admin/device/index.vue').default);
+Vue.component('device-edit', require('./components/admin/device/index.vue').default);
+
 
 Vue.component('receipt-index', require('./components/admin/receipt/index.vue').default);
 Vue.component('receipt-new', require('./components/admin/receipt/index.vue').default);
@@ -53,6 +57,7 @@ Vue.component('sum-edit', require('./components/admin/sum/index.vue').default);
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
+Vue.prototype.$bus = new Vue({})
 
 const app = new Vue({
     el: '#app',

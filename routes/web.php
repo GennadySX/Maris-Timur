@@ -33,7 +33,7 @@ Route::group(['prefix' => '/home'], function () {
     Route::group(['prefix' => '/repair'], function () {
         Route::get('/', 'RepairController@index');
         Route::get('/new', 'RepairController@new');
-        Route::post('/new', 'RepairController@create');
+        Route::post('/create', 'RepairController@create');
         Route::get('/edit/{id}', 'RepairController@edit');
         Route::post('/edit/{id}', 'RepairController@update');
         Route::get('/delete/{id}', 'RepairController@destroy');
@@ -53,7 +53,7 @@ Route::group(['prefix' => '/home'], function () {
     Route::group(['prefix' => '/sum'], function () {
         Route::get('/', 'SumController@index');
         Route::get('/new', 'SumController@new');
-        Route::post('/new', 'SumController@create');
+        Route::post('/create', 'SumController@create');
         Route::get('/edit/{id}', 'SumController@edit');
         Route::post('/edit/{id}', 'SumController@update');
         Route::get('/delete/{id}', 'SumController@destroy');
@@ -62,9 +62,9 @@ Route::group(['prefix' => '/home'], function () {
     Route::group(['prefix' => '/receipt'], function () {
         Route::get('/', 'ReceiptController@index');
         Route::get('/new', 'ReceiptController@new');
-        Route::post('/new', 'ReceiptController@create');
+        Route::post('/create', 'ReceiptController@create');
         Route::get('/edit/{id}', 'ReceiptController@edit');
-        Route::post('/edit/{id}', 'ReceiptController@update');
+        Route::post('/update', 'ReceiptController@update');
         Route::get('/delete/{id}', 'ReceiptController@destroy');
     });
 

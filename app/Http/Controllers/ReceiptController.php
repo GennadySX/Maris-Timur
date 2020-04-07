@@ -3,23 +3,26 @@
 namespace App\Http\Controllers;
 
 use App\Receipt;
+use App\Ring;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ReceiptController extends Controller
 {
     public function index()
     {
-        return view('admin.receipt.index');
+        return view('admin.receipt.index')->with(['data' => Receipt::where('customer_id', Auth::id())->with('device')->get()]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+
+    public function create(Request $request, Receipt $receipt)
     {
-        //
+        $receipt->fill($request->all());
+        $receipt->customer_id =  Auth::id();
+        return ($receipt->save()) ?
+            response()->json(['status' => true, 'receipt'=>$receipt], 201)
+            :  response()->json(['status' => false, 'mess'=>'Что то пошло не так!'], 502);
+
     }
 
     /**
@@ -55,16 +58,15 @@ class ReceiptController extends Controller
         //
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Receipt  $receipt
-     * @return \Illuminate\Http\Response
-     */
+
     public function update(Request $request, Receipt $receipt)
     {
-        //
+        $update = $receipt::where('customer_id', Auth::id())
+            ->where('id', (string)$request->id);
+        return ($update->update($request->all())) ?
+            response()->json(['status' => true, 'receipt'=>$update->get()], 202)
+            :  response()->json(['status' => false, 'mess'=>'Что то пошло не так!', $update], 502);
+
     }
 
     /**

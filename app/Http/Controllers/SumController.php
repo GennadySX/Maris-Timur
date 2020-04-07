@@ -2,14 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Repair;
 use App\Sum;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class SumController extends Controller
 {
     public function index()
     {
-        return view('admin.sum.index');
+        return view('admin.sum.index')->with(['data' => Sum::where('customer_id', Auth::id())->get()]);
     }
 
     /**

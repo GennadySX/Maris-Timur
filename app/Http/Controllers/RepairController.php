@@ -2,41 +2,43 @@
 
 namespace App\Http\Controllers;
 
+use App\Receipt;
 use App\Repair;
+use App\Ring;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class RepairController extends Controller
 {
     public function index()
     {
-        return view('admin.repair.index');
+        return view('admin.repair.index')->with(['data' => Repair::where('customer_id', Auth::id())->with('device')->get()]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+    public function create(Request $request, Repair $repair)
     {
-        //
+        $repair->fill($request->all());
+        $repair->customer_id = Auth::id();
+        return ($repair->save()) ?
+            response()->json(['status' => true, 'repair' => Repair::where('id', $repair->id)->with('device')->first()], 201)
+            : response()->json(['status' => false, 'mess' => 'Что то пошло не так!'], 502);
+
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
+    public function update(Request $request, Repair $repair)
     {
-        //
+        $update = $repair::where('customer_id', Auth::id())
+            ->where('id', (string)$request->id);
+        return ($update->update($request->all())) ?
+            response()->json(['status' => true, 'receipt' => $update->get()], 202)
+            : response()->json(['status' => false, 'mess' => 'Что то пошло не так!', $update], 502);
+
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Repair  $repair
+     * @param \App\Repair $repair
      * @return \Illuminate\Http\Response
      */
     public function show(Repair $repair)
@@ -47,7 +49,7 @@ class RepairController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Repair  $repair
+     * @param \App\Repair $repair
      * @return \Illuminate\Http\Response
      */
     public function edit(Repair $repair)
@@ -55,26 +57,11 @@ class RepairController extends Controller
         //
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Repair  $repair
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Repair $repair)
-    {
-        //
-    }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Repair  $repair
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Repair $repair)
+
+    public function destroy($id, Repair $repair)
     {
-        //
+        $repair::where('id', $id)->where('customer_id', Auth::id())->delete();
+        return back();
     }
 }
