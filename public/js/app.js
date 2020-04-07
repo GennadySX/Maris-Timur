@@ -3165,7 +3165,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -42220,9 +42219,7 @@ var render = function() {
                                   {
                                     staticClass: "btn btn-danger",
                                     attrs: {
-                                      href: _vm.path + "/delete/" + item.id,
-                                      "data-toggle": "modal",
-                                      "data-target": "#deleteModalCenter"
+                                      href: _vm.path + "/delete/" + item.id
                                     }
                                   },
                                   [_c("i", { staticClass: "fa fa-trash" })]

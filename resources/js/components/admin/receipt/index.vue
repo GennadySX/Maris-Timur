@@ -81,8 +81,7 @@
                                         <button class="btn btn-primary mr-1" @click="editIt($event,item, index)"
                                                 data-toggle="modal" data-target="#editModalCenter"><i
                                             class="fa fa-pencil"></i></button>
-                                        <a class="btn btn-danger" :href="path+'/delete/'+ item.id"
-                                                data-toggle="modal" data-target="#deleteModalCenter"><i
+                                        <a class="btn btn-danger" :href="path+'/delete/'+ item.id"><i
                                             class="fa fa-trash"></i></a>
                                     </td>
                                 </tr>

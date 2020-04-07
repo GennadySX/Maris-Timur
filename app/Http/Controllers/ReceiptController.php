@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Receipt;
+use App\Repair;
 use App\Ring;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -69,14 +70,9 @@ class ReceiptController extends Controller
 
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Receipt  $receipt
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Receipt $receipt)
+    public function destroy($id, Receipt $receipt)
     {
-        //
+        $receipt::where('id', $id)->where('customer_id', Auth::id())->delete();
+        return back();
     }
 }
