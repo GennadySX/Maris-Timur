@@ -4,6 +4,7 @@ namespace Illuminate\Support;
 
 use Closure;
 use Illuminate\Support\Traits\Macroable;
+use Symfony\Component\VarDumper\VarDumper;
 
 class Stringable
 {
@@ -236,6 +237,16 @@ class Stringable
     }
 
     /**
+     * Determine if the given string is not empty.
+     *
+     * @return bool
+     */
+    public function isNotEmpty()
+    {
+        return ! $this->isEmpty();
+    }
+
+    /**
      * Convert a string to kebab case.
      *
      * @return static
@@ -359,8 +370,8 @@ class Stringable
     /**
      * Replace the given value in the given string.
      *
-     * @param  string  $search
-     * @param  string  $replace
+     * @param  string|string[]  $search
+     * @param  string|string[]  $replace
      * @return static
      */
     public function replace($search, $replace)
@@ -530,6 +541,28 @@ class Stringable
     }
 
     /**
+     * Left trim the string of the given characters.
+     *
+     * @param  string  $characters
+     * @return static
+     */
+    public function ltrim($characters = null)
+    {
+        return new static(ltrim(...array_merge([$this->value], func_get_args())));
+    }
+
+    /**
+     * Right trim the string of the given characters.
+     *
+     * @param  string  $characters
+     * @return static
+     */
+    public function rtrim($characters = null)
+    {
+        return new static(rtrim(...array_merge([$this->value], func_get_args())));
+    }
+
+    /**
      * Make a string's first character uppercase.
      *
      * @return static
@@ -566,6 +599,30 @@ class Stringable
     public function words($words = 100, $end = '...')
     {
         return new static(Str::words($this->value, $words, $end));
+    }
+
+    /**
+     * Dump the string.
+     *
+     * @return $this
+     */
+    public function dump()
+    {
+        VarDumper::dump($this->value);
+
+        return $this;
+    }
+
+    /**
+     * Dump the string and end the script.
+     *
+     * @return void
+     */
+    public function dd()
+    {
+        $this->dump();
+
+        die(1);
     }
 
     /**
