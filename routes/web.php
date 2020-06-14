@@ -13,6 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -20,6 +23,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
 
 
 Route::group(['prefix' => '/home'], function () {
@@ -39,7 +43,6 @@ Route::group(['prefix' => '/home'], function () {
         Route::get('/delete/{id}', 'RepairController@destroy');
     });
 
-
     Route::group(['prefix' => '/ring'], function () {
         Route::get('/', 'RingController@index');
         Route::get('/new', 'RingController@new');
@@ -48,7 +51,6 @@ Route::group(['prefix' => '/home'], function () {
         Route::post('/edit/{id}', 'RingController@update');
         Route::get('/delete/{id}', 'RingController@destroy');
     });
-
 
     Route::group(['prefix' => '/sum'], function () {
         Route::get('/', 'SumController@index');
@@ -67,9 +69,6 @@ Route::group(['prefix' => '/home'], function () {
         Route::post('/update', 'ReceiptController@update');
         Route::get('/delete/{id}', 'ReceiptController@destroy');
     });
-
-
-
 
 });
 
